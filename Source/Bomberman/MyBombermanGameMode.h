@@ -9,13 +9,16 @@
 /**
  * 
  */
+
 UCLASS()
 class BOMBERMAN_API AMyBombermanGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
-	AMyBombermanGameMode();
-
+public:
 	UPROPERTY()
-	TMap<UNetConnection*, FNetTestPlayer> KnownPlayers;
+	TArray<UNetConnection*> KnownPlayers;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<APawn> PlayingPawn;
 };
