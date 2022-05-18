@@ -16,4 +16,16 @@ class BOMBERMAN_API AMyBombermanPlayerController : public APlayerController
 	
 public:
 	AMyBombermanPlayerController();
+
+	UFUNCTION(BlueprintCallable, Server, Reliable)  
+	void DyingPawn();
+
+	UFUNCTION(BlueprintCallable, Server, Reliable)
+	void RespawnPawn();
+
+	UFUNCTION(BlueprintCallable, Server, Reliable)
+	void UseBomb();
+
+	UPROPERTY(EditAnywhere)
+	FTransform Transform;
 };

@@ -21,4 +21,11 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<APawn> PlayingPawn;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<APawn> DestroyedPawn;
+
+	void DestroyPawn(APlayerController* PlayerController);
+	void RespawnPawn(APlayerController* PlayerController, FTransform Transform);
+	void SpawnBomb(FTransform Transform);
 };
