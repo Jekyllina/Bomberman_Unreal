@@ -45,9 +45,9 @@ void AMyBombermanGameMode::RespawnPawn(APlayerController* PlayerController, FTra
 	}
 }
 
-void AMyBombermanGameModeSpawnBomb(FTransform Transform)
+void AMyBombermanGameMode::SpawnBomb(FTransform Transform)
 {
-	UBlueprint* BombBlueprint = LoadObject<UBlueprint>(nullptr, TEXT("/Game/Bomb.Bomb_C"));
+	UBlueprint* BombBlueprint = LoadObject<UBlueprint>(nullptr, TEXT("/Game/Bomb.Bomb"));
 	
 	if (BombBlueprint)
 	{

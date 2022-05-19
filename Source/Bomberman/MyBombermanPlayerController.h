@@ -24,7 +24,7 @@ public:
 	void RespawnPawn();
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
-	void UseBomb();
+	void UseBomb(UBlueprint* Bomb);
 
 	UPROPERTY(EditAnywhere)
 	FTransform Transform;
