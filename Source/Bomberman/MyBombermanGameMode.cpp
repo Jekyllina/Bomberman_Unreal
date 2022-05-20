@@ -44,16 +44,3 @@ void AMyBombermanGameMode::RespawnPawn(APlayerController* PlayerController, FTra
 		}
 	}
 }
-
-void AMyBombermanGameMode::SpawnBomb(FTransform Transform)
-{
-	UBlueprint* BombBlueprint = LoadObject<UBlueprint>(nullptr, TEXT("/Game/Bomb.Bomb"));
-	
-	if (BombBlueprint)
-	{
-		if (BombBlueprint->GeneratedClass->IsChildOf<AActor>())  
-		{
-			AActor* NewActor = GetWorld()->SpawnActor<AActor>(BombBlueprint->GeneratedClass, Transform);
-		}
-	}
-}

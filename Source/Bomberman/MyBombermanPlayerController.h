@@ -25,7 +25,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void UseBomb(UBlueprint* Bomb);
-
-	UPROPERTY(EditAnywhere)
+	
 	FTransform Transform;
+	FTransform BombTransform;
 };

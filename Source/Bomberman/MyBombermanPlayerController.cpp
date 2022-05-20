@@ -36,17 +36,10 @@ void AMyBombermanPlayerController::RespawnPawn_Implementation()
 }
 
 void AMyBombermanPlayerController::UseBomb_Implementation(UBlueprint* Bomb)
-{
-	/*AMyBombermanGameMode* GameMode = GetWorld()->GetAuthGameMode<AMyBombermanGameMode>();
-
-	if (GameMode)
-	{
-		GameMode->SpawnBomb(Transform);
-	}*/
-
+{	
 	APawn* CurrentPawn = this->GetPawn();
-	Transform = CurrentPawn->GetActorTransform();
-	Transform.AddToTranslation(FVector(0, 0, -70));
+	BombTransform = CurrentPawn->GetActorTransform();
+	BombTransform.AddToTranslation(FVector(0, 0, -70));
 
-	AActor* BombActor = GetWorld()->SpawnActor<AActor>(Bomb->GeneratedClass, Transform);
+	AActor* BombActor = GetWorld()->SpawnActor<AActor>(Bomb->GeneratedClass, BombTransform);
 }
