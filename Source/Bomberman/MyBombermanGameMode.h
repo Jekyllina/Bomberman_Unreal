@@ -16,9 +16,6 @@ class BOMBERMAN_API AMyBombermanGameMode : public AGameModeBase
 	GENERATED_BODY()
 
 public:
-	UPROPERTY()
-	TArray<UNetConnection*> KnownPlayers;
-
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<APawn> PlayingPawn;
 

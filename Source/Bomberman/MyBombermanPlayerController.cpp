@@ -5,7 +5,7 @@
 
 AMyBombermanPlayerController::AMyBombermanPlayerController()
 {
-	bShowMouseCursor = true;
+	bShowMouseCursor = true;	
 }
 
 void AMyBombermanPlayerController::DyingPawn_Implementation()
