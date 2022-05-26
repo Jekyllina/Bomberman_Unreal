@@ -19,10 +19,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Server, Reliable)  
 	void DyingPawn();
-
-	UFUNCTION(BlueprintCallable, Server, Reliable)
-	void RespawnPawn();
-
+	
 	UFUNCTION(BlueprintCallable, Server, Reliable)
 	void UseBomb(UBlueprint* Bomb);
 	

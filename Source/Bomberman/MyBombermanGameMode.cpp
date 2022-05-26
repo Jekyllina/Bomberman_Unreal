@@ -26,21 +26,3 @@ void AMyBombermanGameMode::DestroyPawn(APlayerController* PlayerController)
 		}
 	}	
 }
-
-void AMyBombermanGameMode::RespawnPawn(APlayerController* PlayerController, FTransform Transform)
-{
-	APawn* CurrentPawn = PlayerController->GetPawn();
-	
-	APawn* NewPawn = GetWorld()->SpawnActor<APawn>(PlayingPawn, Transform);
-
-	if (NewPawn)
-	{
-		PlayerController->UnPossess();
-		PlayerController->Possess(NewPawn);
-
-		if (CurrentPawn)
-		{
-			CurrentPawn->Destroy();
-		}
-	}
-}

@@ -23,5 +23,4 @@ public:
 	TSubclassOf<APawn> DestroyedPawn;
 
 	void DestroyPawn(APlayerController* PlayerController);
-	void RespawnPawn(APlayerController* PlayerController, FTransform Transform);	
 };

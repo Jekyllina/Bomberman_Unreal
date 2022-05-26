@@ -93,9 +93,8 @@ bool FLevelCreatorPuginModule::Exec(UWorld* InWorld, const TCHAR* Cmd, FOutputDe
 
 		FTransform MyTransform;
 		MyTransform.SetLocation(FVector(0, 0, 0));	
-		MyTransform.SetScale3D(FVector(LevelTexture->GetSizeX() / 10, LevelTexture->GetSizeY() / 10, 1));
-		Floor->SetActorTransform(MyTransform);
-		//Floor->SetActorScale3D(MyTransform.GetScale3D());
+		MyTransform.SetScale3D(FVector(LevelTexture->GetSizeX() / 10.f, LevelTexture->GetSizeY() / 10.f, 1));
+		Floor->SetActorTransform(MyTransform);		
 		Floor->GetStaticMeshComponent()->SetStaticMesh(MyFloor);		
 
 		FVector SizeFloor = Floor->GetComponentsBoundingBox().GetSize();

@@ -14,7 +14,7 @@ void AMyBombermanPlayerController::DyingPawn_Implementation()
 
 	if (CurrentPawn)
 	{
-		Transform = CurrentPawn->GetActorTransform();
+		Transform = CurrentPawn->GetActorTransform();		
 	}
 
 	AMyBombermanGameMode* GameMode = GetWorld()->GetAuthGameMode<AMyBombermanGameMode>();
@@ -22,16 +22,6 @@ void AMyBombermanPlayerController::DyingPawn_Implementation()
 	if (GameMode)
 	{		
 		GameMode->DestroyPawn(this);
-	}
-}
-
-void AMyBombermanPlayerController::RespawnPawn_Implementation()
-{
-	AMyBombermanGameMode* GameMode = GetWorld()->GetAuthGameMode<AMyBombermanGameMode>();
-
-	if (GameMode)
-	{
-		GameMode->RespawnPawn(this, Transform);
 	}
 }
 
